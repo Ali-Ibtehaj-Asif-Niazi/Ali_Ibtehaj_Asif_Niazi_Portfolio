@@ -168,3 +168,9 @@
 .flex-between {
   @apply flex justify-between items-center;
 }
+
+.image-with-text {
+  margin-right: 10px;
+  margin-left: 15px; /* Adjust this value as needed */
+  margin-top: 5px;
+}

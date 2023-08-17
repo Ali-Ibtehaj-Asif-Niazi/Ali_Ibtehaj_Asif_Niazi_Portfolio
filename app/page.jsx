@@ -1,4 +1,5 @@
 import Feed from '@components/Feed';
+import Image from 'next/image';
 
 const Home = () => {
   return (
@@ -8,9 +9,25 @@ const Home = () => {
             <br className="max-md:hidden"/>
             <span className="orange_gradient text-center">AI-Powered Promts</span>
         </h1>
-        <p className="desc text-center">
-            Promptopia is an open-source AI prompting tool for modern world to discover, create and share creative prompts
-        </p>
+        <div className= "flex center">
+        <Image 
+          src="/assets/images/reactt.gif"
+          alt="reactt" 
+          width={100} 
+          height={100}
+          className="image-with-text" 
+            />
+        <h2 className="desc text-center ">
+          By: Ali Ibtehaj Asif Niazi
+        </h2>
+        <Image 
+          src="/assets/images/mypic.png"
+          alt="reactt" 
+          width={50} 
+          height={50}
+          className="image-with-text" 
+          />
+        </div>
         <Feed/>
     </section>
   )
