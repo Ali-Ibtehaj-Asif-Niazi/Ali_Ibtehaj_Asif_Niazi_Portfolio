@@ -21,12 +21,12 @@ const Nav = () => {
         <Link href="/" className="flex gap-2 flex-center">
             <Image 
                 src="/assets/images/logo2.svg" 
-                alt="Promptopia Logo" 
+                alt="logo" 
                 width={30} 
                 height={30} 
                 className="object-contain"
             />
-            <p className="logo_text">NextJS Promptopia Project</p>
+            <p className="logo_text">Welcome to my Portfolio in NextJs</p>
         </Link>
 
         {/* Desktop Navigation */}
