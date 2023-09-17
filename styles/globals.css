@@ -16,54 +16,48 @@
   justify-content: center;
   padding: 120px 24px 160px 24px;
   pointer-events: none;
+  align-items: center;
+  background: #ffffff; /* Updated background color to black */
+  overflow: hidden; /* Hide overflowing content */
 }
 
 .main:before {
-  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
+  content: "";
   position: absolute;
-  content: "";
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  top: 0;
-}
-
-.main:after {
-  content: "";
-  background-image: url("/assets/images/grid.svg");
   z-index: 1;
-  position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
+  background-image: url("/assets/images/grid.svg");
   opacity: 0.4;
   filter: invert(1);
 }
 
-.gradient {
-  height: fit-content;
-  z-index: 3;
-  width: 100%;
-  max-width: 640px;
-  background-image: radial-gradient(
-      at 27% 37%,
-      hsla(215, 98%, 61%, 1) 0px,
-      transparent 0%
-    ),
-    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
-    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
-    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
-    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
-    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
-    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+/* Create a gradient overlay */
+/* Create a growing and shrinking circle */
+.circle {
   position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  filter: blur(100px) saturate(150%);
-  top: 80px;
-  opacity: 0.15;
+  width: 1400px; /* Initial width and height */
+  height: 1100px;
+  background-color: #bffffa; /* Circle color */
+  border-radius: 50%; /* Make it a circle */
+  animation: circleAnimation 8s ease-in-out infinite; /* Adjust the duration and timing function as needed */
+  filter: blur(0); /* Start with no blur */
 }
+
+@keyframes circleAnimation {
+  0%, 100% {
+    width: 1400px;
+    height: 1100px;
+    filter: blur(1000px); /* No blur at the start and end */
+  }
+  50% {
+    width: 2000px; /* Grow to a larger size */
+    height: 1700px;
+    filter: blur(1000px); /* Apply blur in the middle of the animation */
+  }
+}
+
 
 @media screen and (max-width: 640px) {
   .main {
