@@ -20,7 +20,6 @@ const Home = () => {
         style={{ width: '150px', height: '150px' }} 
         loop autoplay></lottie-player>
 
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
         <lottie-player 
         src="https://lottie.host/b222471d-4226-4b6c-abfd-16e60b92ab1d/FkgpJKT0qO.json" 
         background="transparent" 
@@ -36,8 +35,7 @@ const Home = () => {
           height={10}
           className="image-with-text" 
           />
-
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
+ 
         <lottie-player 
           src="https://lottie.host/e542c907-33fa-40bd-bb0a-037778d57320/WYQu4sr8ve.json" 
           background="transparent" 
@@ -45,8 +43,7 @@ const Home = () => {
           style={{ width: '150px', height: '150px' }}
           loop autoplay>
           </lottie-player>
-
-          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
+ 
           <lottie-player 
           src="https://lottie.host/1248292a-c87a-473b-b8b1-d932bd02de17/1qcTEhE9dw.json" 
           background="transparent" 
