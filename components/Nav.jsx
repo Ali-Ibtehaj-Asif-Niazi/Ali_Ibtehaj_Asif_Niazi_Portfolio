@@ -20,7 +20,7 @@ const Nav = () => {
     <nav className = "flex-between w-full mb-16 pt-3">
         <Link href="/" className="flex gap-2 flex-center">
             <Image 
-                src="/assets/images/logo2.svg" 
+                src="/assets/images/logo2.png" 
                 alt="logo" 
                 width={30} 
                 height={30} 
@@ -33,7 +33,7 @@ const Nav = () => {
         <div className="sm:flex hidden">
             {session?.user ? (
                 <div className="flex gap-3 md:gap-5">
-                    <Link href="/create-prompt" className="black_btn">
+                    <Link href="/create-prompt" className="white_btn">
                         Create Post
                     </Link>
                     <button type="button" onClick={signOut} className="outline_btn">
@@ -57,7 +57,7 @@ const Nav = () => {
                                 type="button"
                                 key={provider.name}
                                 onClick={() => signIn(provider.id)}
-                                className="black_btn"
+                                className="white_btn"
                             >
                                 Sign In
                             </button>
@@ -102,7 +102,7 @@ const Nav = () => {
                                     setToggleDropdown(false);
                                     signOut();
                                 }}
-                                className="mt-5 w-full black_btn"
+                                className="mt-5 w-full white_btn"
                             >
                                 Sign Out
                             </button>
@@ -117,7 +117,7 @@ const Nav = () => {
                                 type="button"
                                 key={provider.name}
                                 onClick={() => signIn(provider.id)}
-                                className="black_btn"
+                                className="white_btn"
                             >
                                 Sign In
                             </button>
