@@ -2,6 +2,7 @@ import '@styles/globals.css';
 import Nav from '@components/Nav';
 import Provider from '@components/Provider';
 import Head from 'next/head';
+import VideoBackground from '@components/VideoBackground';
 
 
 export const metadata = {
@@ -17,9 +18,7 @@ const RootLayout = ({children}) => {
             </Head>
             <body>
                 <Provider>
-                    <div className="main">
-                        <div className="circle"/>
-                    </div>
+                    <VideoBackground/>
                     <main className='app'>
                         <Nav/>
                         {children}
