@@ -4,26 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.video-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  object-fit: cover; /* Maintain aspect ratio and cover entire container */
-}
-
-.bigbox {
-  display: flex;
-  flex-wrap: wrap; /* Allows the divs to wrap to the next row on smaller screens */
-}
-
-@media (max-width: 768px) {
-  .bigbox {
-    flex-direction: column; /* Stack divs on top of each other */
-  }
-}
 
 /* Tailwind Styles */
 
@@ -34,7 +14,6 @@
 .white_btn {
   @apply rounded-full border border-white bg-white py-1.5 px-5 text-black transition-all hover:bg-black hover:text-white text-center text-sm font-inter flex items-center justify-center;
 }
-
 
 .black_btn {
   @apply rounded-full border border-black bg-black py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm font-inter flex items-center justify-center;
@@ -51,6 +30,7 @@
 .orange_gradient {
   @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
 }
+
 
 .green_gradient {
   @apply bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent;
@@ -126,186 +106,4 @@
 
 .flex-between {
   @apply flex justify-between items-center;
-}
-
-.image-with-text {
-  margin-right: 10px;
-  margin-left: 15px; /* Adjust this value as needed */
-  margin-top: 5px;
-}
-
-
-.adam {
-  display: grid;
-  place-items: center;
-  width: 100vmin;
-  height: 100vmin; 
-  cursor: grabbing;
-}
-
-
-/* Add this CSS to your stylesheets for the ThreeJs*/
-.globe {
-  display: grid;
-  place-items: center;
-  width: 30vmax;
-  height: 30vmax; 
-  cursor: grabbing;
-}
-
-
-.globe-container {
-  width: 400px;
-  height: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #00000033;
-  border: 1px solid #cccccc17;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.globe-logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.globe-logo-text {
-  color: #0785da;
-  font-size: 18px;
-  font-weight: bold;
-  margin-right: 10px;
-}
-
-
-/* Add this CSS to your stylesheets for the ChatGPT style*//* Chat Container *//* Chat Container */
-.chat-container {
-  width: 400px; /* Set a fixed width for the chat container */
-  height: 400px; /* Set a fixed height for the chat container */
-  background-color: #00000033;
-  border: 1px solid #cccccc17;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Chat Header */
-.chat-header {
-  padding: 10px;
-  background-color: #007acc31;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo-text {
-  color: #0785da;
-  font-size: 18px;
-  font-weight: bold;
-  margin-right: 10px;
-}
-
-.logo-image {
-  width: 50px;
-  height: 50px;
-}
-
-.chat-subtitle {
-  color: #ffffff;
-  text-align: center;
-  font-size: 14px;
-  margin-top: 10px;
-}
-
-/* Messages Container */
-.message-container {
-  flex-grow: 1;
-  overflow-y: auto; /* Add a scrollbar for the message container */
-  padding: 10px;
-}
-
-/* Message Styles */
-.message {
-  margin-top: 10px;
-  border-radius: 10px;
-  padding: 10px;
-  position: relative; /* Add position relative for positioning the tail */
-
-  /* Add a tail for the chat bubble */
-  &:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-style: solid;
-  }
-}
-
-.user {
-  background-color: #e6f7ff; /* User message background color */
-  text-align: left;
-
-  /* User message tail */
-  &:after {
-    border-width: 5px 10px 5px 0;
-    border-color: transparent #e6f7ff transparent transparent;
-    right: 100%;
-    margin-right: 10px;
-  }
-}
-
-.assistant {
-  background-color: #f2f2f2; /* AI message background color */
-  text-align: right;
-
-  /* AI message tail */
-  &:after {
-    border-width: 5px 0 5px 10px;
-    border-color: transparent transparent transparent #f2f2f2;
-    left: 100%;
-    
-  }
-}
-
-.message-content {
-  margin: 0;
-}
-
-/* Input Form */
-.input-form {
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.input-field {
-  flex-grow: 2;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  height: 40px; /* Adjust the height to your preference */
-}
-
-.send-button,
-.clear-button {
-  background-color: #007acc;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 0; /* Remove padding */
-  height: 37px; /* Make the buttons the same height as the input field */
-  cursor: pointer;
-  width: 50px; /* Set a fixed width for the buttons */
-  margin-left: 10px;
-}
-
-.send-button:hover,
-.clear-button:hover {
-  background-color: #005bbf;
 }
