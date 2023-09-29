@@ -26,7 +26,6 @@ const { messages, setMessages, input, handleInputChange, handleSubmit } = useCha
         <div className="message-container">
             {messages.map(m => (
                 <div key={m.id} className={`message ${m.role}`}>
-                    {console.log(`Message role: ${m.role}`)}
                     <p className="message-content">{m.content}</p>
                 </div>))}
         </div>

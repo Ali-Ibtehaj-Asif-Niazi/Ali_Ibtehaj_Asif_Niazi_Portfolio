@@ -1,8 +1,8 @@
 import '@styles/globals.css';
+import '@styles/customStyle.css';
 import Nav from '@components/Nav';
 import Provider from '@components/Provider';
 import Head from 'next/head';
-import VideoBackground from '@components/VideoBackground';
 
 
 export const metadata = {
@@ -18,7 +18,7 @@ const RootLayout = ({children}) => {
             </Head>
             <body>
                 <Provider>
-                    <VideoBackground/>
+                    <div className="backgroundspace"></div>
                     <main className='app'>
                         <Nav/>
                         {children}

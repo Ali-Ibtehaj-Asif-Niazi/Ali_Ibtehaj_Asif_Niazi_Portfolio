@@ -17,7 +17,7 @@ const Nav = () => {
         setUpProviders();
     },[])
   return (
-    <nav className = "flex-between w-full mb-16 pt-3">
+    <nav className = "flex-between w-full pt-3">
         <Link href="/" className="flex gap-2 flex-center">
             <Image 
                 src="/assets/images/logo2.png" 
@@ -33,6 +33,33 @@ const Nav = () => {
         <div className="sm:flex hidden">
             {session?.user ? (
                 <div className="flex gap-3 md:gap-5">
+                    <Link href="https://www.linkedin.com/in/ali-ibtehaj-asif-niazi-ab17881a3/">
+                        <Image 
+                            src="/assets/images/linkedin.png" 
+                            alt="linkedin" 
+                            width={20} 
+                            height={20}
+                            style={{ marginTop: '10px' }}
+                        />
+                    </Link>
+                    <Link href="mailto:aliibtehajasifniazi@gmail.com">
+                        <Image 
+                            src="/assets/images/gmail.png" 
+                            alt="gmail" 
+                            width={20} 
+                            height={20}
+                            style={{ marginTop: '10px' }}
+                        />
+                    </Link>
+                    <Link href="https://github.com/Ali-Ibtehaj-Asif-Niazi">
+                        <Image 
+                            src="/assets/images/github.png" 
+                            alt="github" 
+                            width={20} 
+                            height={20}
+                            style={{ marginTop: '10px' }}
+                        />
+                    </Link>
                     <Link href="/create-prompt" className="white_btn">
                         Create Post
                     </Link>
@@ -72,6 +99,33 @@ const Nav = () => {
         <div className="sm:hidden flex relative">
             { session?.user ? (
                 <div className ="flex">
+                    <Link href="https://www.linkedin.com/in/ali-ibtehaj-asif-niazi-ab17881a3/">
+                        <Image 
+                            src="/assets/images/linkedin.png" 
+                            alt="linkedin" 
+                            width={20} 
+                            height={20}
+                            style={{ marginTop: '10px', marginRight: '10px' }}
+                        />
+                    </Link>
+                    <Link href="mailto:aliibtehajasifniazi@gmail.com">
+                        <Image 
+                            src="/assets/images/gmail.png" 
+                            alt="gmail" 
+                            width={20} 
+                            height={20}
+                            style={{ marginTop: '10px', marginRight: '10px' }}
+                        />
+                    </Link>
+                    <Link href="https://github.com/Ali-Ibtehaj-Asif-Niazi">
+                        <Image 
+                            src="/assets/images/github.png" 
+                            alt="github" 
+                            width={20} 
+                            height={20}
+                            style={{ marginTop: '10px', marginRight: '10px' }}
+                        />
+                    </Link>
                     <Image 
                         src={session?.user.image}
                         width={37}
