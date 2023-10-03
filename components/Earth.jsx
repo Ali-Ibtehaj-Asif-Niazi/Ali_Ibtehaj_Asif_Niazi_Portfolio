@@ -28,9 +28,8 @@ const Earth = () => {
                 <img
                     src="https://pbs.twimg.com/profile_images/1390736294666506242/_D_h6aWq_400x400.png"
                     alt="hugging"
-                    width={30}
-                    height={30}
-                    className="logo-image"
+                    width={50}
+                    height={50}
                 />
             </div>
             <Canvas shadows dpr={[1, 2]} camera={{ position: [0, 0, 4], fov: 30 }}>
