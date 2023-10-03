@@ -61,7 +61,9 @@ const Home = () => {
 
       {/* Chat + ThreeJS*/}
       <span className= "bigbox">
-        <Chat/>
+        <div className="chat-container1">
+          <Chat/>
+        </div>
         <p className="ml-16"></p>
         <Earth/>
       </span>
