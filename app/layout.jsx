@@ -1,6 +1,6 @@
 import '@styles/globals.css';
 import '@styles/customStyle.css';
-import Nav from '@components/Nav';
+import MainNav from '@components/MainNav';
 import Provider from '@components/Provider';
 import Head from 'next/head';
 
@@ -20,7 +20,7 @@ const RootLayout = ({children}) => {
                 <Provider>
                     <div className="backgroundspace"></div>
                     <main className='app'>
-                        <Nav/>
+                        <MainNav/>
                         {children}
                     </main>
                 </Provider>
