@@ -1,6 +1,9 @@
-import Feed from '@components/Feed';
 import Earth from '@components/Earth';
 import Chat from '@components/Chat';
+import Link from 'next/link';
+import { TextToSpeech } from "@/components/TextToSpeech";
+import { IsPlayingProvider } from "@/components/IsPlayingContext";
+import { ChatBotCanvas } from "@/components/ChatBotCanvas";
 
 
 const Home = () => {
@@ -61,14 +64,26 @@ const Home = () => {
 
       {/* Chat + ThreeJS*/}
       <span className= "bigbox">
+        <Earth/>
+        <p className="ml-10"></p>
         <div className="chat-container1">
           <Chat/>
         </div>
-        <p className="ml-16"></p>
-        <Earth/>
+        <p className="ml-10"></p>
+        <div className="chat-container1">
+          <p className="logo-text">AI talking bot made using Text-to-Speech, Three.js and Hugging faces LLM</p>
+          <IsPlayingProvider>
+            <ChatBotCanvas />
+            <TextToSpeech />
+          </IsPlayingProvider>
+		    </div>
       </span>
-      <Feed/>
-      <p>\bot</p>
+      <br className="max-md:hidden"/>
+      <Link href="/prompts" className="flex gap-2 flex-center">
+        <button className="text-[#00aaff] p-2 border border-[#00aaff] rounded-lg disabled:text-blue-100 
+						disabled:cursor-not-allowed disabled:bg-gray-500 hover:scale-110 hover:bg-[#00aaff] hover:text-black duration-300 transition-all">User Prompts</button>
+      </Link>
+      <br className="max-md:hidden"/>
     </section>
   )
 }
