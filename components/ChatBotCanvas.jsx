@@ -1,5 +1,5 @@
 "use client";
-import { AppContext } from "../app/context/IsPlayingContext";
+import { AppContext } from "@/components/IsPlayingContext";
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import {
 	Environment,

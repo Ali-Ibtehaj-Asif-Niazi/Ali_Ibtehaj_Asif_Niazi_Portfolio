@@ -1,5 +1,5 @@
 "use client";
-import { AppContext } from "../app/context/IsPlayingContext";
+import { AppContext } from "@/components/IsPlayingContext";
 import { useContext, useState} from "react";
 import { useChat } from 'ai/react';
 

@@ -2,7 +2,7 @@ import Earth from '@components/Earth';
 import Chat from '@components/Chat';
 import Link from 'next/link';
 import { TextToSpeech } from "@/components/TextToSpeech";
-import { IsPlayingProvider } from "./context/IsPlayingContext";
+import { IsPlayingProvider } from "@/components/IsPlayingContext";
 import { ChatBotCanvas } from "@/components/ChatBotCanvas";
 
 
