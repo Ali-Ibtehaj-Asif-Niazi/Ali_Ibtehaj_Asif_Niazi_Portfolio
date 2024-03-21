@@ -1,0 +1,23 @@
+.clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  
+  .clock {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .time {
+    font-size: 3em;
+    color: #fff;
+  }
+  
+  .date {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #ffe;
+  }
+  

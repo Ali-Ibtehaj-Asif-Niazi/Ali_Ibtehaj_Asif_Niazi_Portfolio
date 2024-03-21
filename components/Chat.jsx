@@ -50,7 +50,6 @@ const Chat = () => {
                     />
                 </Link>
             </div>
-            <p className="chat-subtitle">Feel free to copy AI prompts shared by other users below</p>
            
             
         </div>

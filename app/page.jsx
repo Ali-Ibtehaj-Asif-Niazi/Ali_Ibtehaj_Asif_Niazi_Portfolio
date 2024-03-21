@@ -1,6 +1,7 @@
 import Earth from '@components/Earth';
 import Chat from '@components/Chat';
-import Link from 'next/link';
+import UserPost from '@components/UserPost';
+import CountDown from '@components/CountDown';
 import { TextToSpeech } from "@/components/TextToSpeech";
 import { IsPlayingProvider } from "@/components/IsPlayingContext";
 import { ChatBotCanvas } from "@/components/ChatBotCanvas";
@@ -64,10 +65,22 @@ const Home = () => {
 
       {/* Chat + ThreeJS*/}
       <span className= "bigbox">
+        <div className="chat-container1">
+          <CountDown/>
+        </div>
+        <p className="ml-10"></p>
         <Earth/>
         <p className="ml-10"></p>
         <div className="chat-container1">
           <Chat/>
+        </div>
+      </span>
+
+      <br className="max-md:hidden"/>
+
+      <span className= "bigbox">
+        <div className="chat-container1">
+          <UserPost/>
         </div>
         <p className="ml-10"></p>
         <div className="chat-container1">
@@ -79,10 +92,6 @@ const Home = () => {
 		    </div>
       </span>
       <br className="max-md:hidden"/>
-      <Link href="/prompts" className="flex gap-2 flex-center">
-        <button className="text-[#00aaff] p-2 border border-[#00aaff] rounded-lg disabled:text-blue-100 
-						disabled:cursor-not-allowed disabled:bg-gray-500 hover:scale-110 hover:bg-[#00aaff] hover:text-black duration-300 transition-all">User Prompts</button>
-      </Link>
       <br className="max-md:hidden"/>
     </section>
   )
